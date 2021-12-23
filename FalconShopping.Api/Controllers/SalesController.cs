@@ -17,10 +17,17 @@ namespace FalconShopping.Api.Controllers
         public async Task<IActionResult> Post([FromBody] ProductSaleModel model)
         {
             var messageBus = MessagingBus.ConfigureBus();
-            var sendUri = new Uri($"{RabbitMqConstants.RabbitMqUri}{RabbitMqConstants.EmailerServiceQueue}");
+
+            ProductSaleEvent saleEvent = new()
+            {
+                User = model.User
+            };
+            await messageBus.Publish<IProductSaleEvent>(saleEvent);
+
+            var sendUri = new Uri($"{RabbitMqConstants.RabbitMqUri}{RabbitMqConstants.SalesServiceQueue}");
             var endpoint = await messageBus.GetSendEndpoint(sendUri);
             await endpoint.Send<IProductSaleCommand>(model);
-            //await messageBus.Publish<IProductSaleCommand>(model);
+
             return Ok();
         }
     }

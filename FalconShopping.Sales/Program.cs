@@ -1,24 +1,24 @@
 ﻿using FalconShopping.MessageContracts;
 using MassTransit;
 
-namespace FalconShopping.Emailer
+namespace FalconShopping.Sales
 {
     class Program
     {
-        public static void Main(String[] args)
+        public static void Main(string[] args)
         {
-            Console.Title = "Emailer";
+            Console.Title = "Sales";
 
             var messageBus = MessagingBus.ConfigureBus((cfg) =>
             {
-                cfg.ReceiveEndpoint(RabbitMqConstants.EmailerServiceQueue, e =>
+                cfg.ReceiveEndpoint(RabbitMqConstants.SalesServiceQueue, e =>
                 {
-                    e.Consumer<ProductSaleEventConsumer>();
+                    e.Consumer<ProductSaleCommandConsumer>();
                 });
             });
 
             messageBus.StartAsync();
-            Console.WriteLine("Emailer listening for sales events...");
+            Console.WriteLine("Sales Service listening for sales commands...");
             Console.ReadLine();
 
             messageBus.StopAsync();

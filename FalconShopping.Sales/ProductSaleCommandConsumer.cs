@@ -6,14 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FalconShopping.Emailer
+namespace FalconShopping.Sales
 {
-    public class ProductSaleCommandConsumer : IConsumer<IProductSaleCommand>
+    internal class ProductSaleCommandConsumer : IConsumer<IProductSaleCommand>
     {
         public Task Consume(ConsumeContext<IProductSaleCommand> context)
         {
             var message = context.Message;
-            Console.Write("Message received. Forwarding sales email to " + message.User.Email);
+            Console.Write("Processing sales {0}", message.Product.Name);
 
             return Task.CompletedTask;
         }
