@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FalconShopping.MessageContracts", "FalconShopping.MessageContracts\FalconShopping.MessageContracts.csproj", "{455FD573-63F0-47CA-BCDD-A46F10E6DFFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FalconShopping.Api", "FalconShopping.Api\FalconShopping.Api.csproj", "{2A5785BA-F1CD-4E5A-B4C9-A22072318878}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FalconShopping.Emailer", "FalconShopping.Emailer\FalconShopping.Emailer.csproj", "{B652FF45-B3FF-484D-82C4-4A15F6B14680}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{455FD573-63F0-47CA-BCDD-A46F10E6DFFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{455FD573-63F0-47CA-BCDD-A46F10E6DFFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{455FD573-63F0-47CA-BCDD-A46F10E6DFFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{455FD573-63F0-47CA-BCDD-A46F10E6DFFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A5785BA-F1CD-4E5A-B4C9-A22072318878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A5785BA-F1CD-4E5A-B4C9-A22072318878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A5785BA-F1CD-4E5A-B4C9-A22072318878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A5785BA-F1CD-4E5A-B4C9-A22072318878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B652FF45-B3FF-484D-82C4-4A15F6B14680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B652FF45-B3FF-484D-82C4-4A15F6B14680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B652FF45-B3FF-484D-82C4-4A15F6B14680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B652FF45-B3FF-484D-82C4-4A15F6B14680}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B553FA0F-56BA-4D01-BD56-0E480ADEDD3A}
+	EndGlobalSection
+EndGlobal
