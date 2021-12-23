@@ -13,8 +13,7 @@ namespace FalconShopping.Emailer
         public Task Consume(ConsumeContext<IProductSaleCommand> context)
         {
             var message = context.Message;
-            Console.WriteLine("Message received");
-            Console.WriteLine(message.User.Email);
+            Console.Write("Message received. Forwarding sales email to " + message.User.Email);
 
             return Task.CompletedTask;
         }

@@ -10,6 +10,6 @@ namespace FalconShopping.MessageContracts.Models
     {
         public string Name { get; set; }
         public string CardNumber { get; set; }
-        public int CVV { get; set; }
+        public string CVV { get; set; }
     }
 }
